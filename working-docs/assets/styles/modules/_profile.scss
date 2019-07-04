@@ -1,0 +1,154 @@
+.profile{
+    width:100%;
+    height: auto;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    background-color:$color-primary;
+    padding: 2rem;
+    border-radius: 5px;
+
+
+  @include atSmall{
+    
+    margin-bottom: 2rem;
+    position: relative; 
+        top: 2rem;
+        left: 0;
+        transform: translate(0, 0);
+  }
+
+  
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include atSmall{
+            flex-direction:column;
+          }
+        
+        &-photo{
+            width:30%; 
+            @include atSmall{
+                width:50%; 
+          }
+        }
+
+        &-description{
+            width:65%;
+            @include atSmall{
+                width:100%; 
+                text-align: center;
+          }
+            
+            &--name{
+                color: $color-secondary;
+
+                @include atSmall{
+    
+                    font-size:1.4rem;
+                  }
+
+                &-title{
+                    display: block;
+                    font-size:1.4rem;
+                    color: $color-tertiary;
+
+                    @include atSmall{
+    
+                        font-size:1rem;
+                      }
+                    
+                }
+            }
+
+            &--body{
+                a{
+                    color: $color-secondary; 
+
+                    &:hover{
+                        color: $color-tertiary;
+                    }
+                }
+            }
+
+            &--logo{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width:60%;
+                margin-top:1rem;
+
+                @include atSmall{
+                    width:100%; 
+                }
+
+                img{
+                    width:15%;  
+                }
+            }
+        }
+
+   }
+
+
+   
+
+    &__portfolio{
+        margin-top:2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        @include atSmall{
+            flex-direction:column;
+          }
+        
+
+        &--card{
+            padding:1rem;
+            background:radial-gradient(circle at center, $color-tertiary 0, $color-secondary 100%);
+            width:30%;
+            transition: all .3s;
+            backface-visibility: hidden;
+            border-radius: 5px;
+
+            @include atSmall{
+                width:100%;
+                margin-bottom: 1rem;
+              }
+
+            &:hover{
+                transform: translate(0px, -10px);
+            }
+            
+
+            &-title{
+                text-align: center;
+                margin-bottom:.5rem;
+                color:$color-light;
+                
+            }
+
+            &-body{
+                text-align: center;
+
+                a, p{
+                    padding:.5rem;
+                    background-color: $color-light;
+                    border: 1px solid $color-light;
+                    border-radius: 5px;
+                    color: $color-primary;
+                    width: 100%;
+
+                    &:hover{
+                        background-color: transparent;
+                        color:$color-light;
+                    }
+                }
+
+            }
+        }
+    }
+}

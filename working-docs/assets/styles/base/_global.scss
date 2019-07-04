@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background:radial-gradient(circle at center, $color-grey 0, $color-primary 100%);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 100vh;
+    overflow: hidden;
+    color:$color-grey;
+
+    @include atSmall{
+      overflow: scroll;
+    }
+
+}
+
+ul li{
+  list-style: none;
+}
+
+h1{
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+
+}
+
+img{
+  width:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr{
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+small{
+  font-size: 80%;
+  font-weight: 400;
+}
+
+form{
+  display: block;
+  margin-top: 0em;
+  padding: 1rem;
+  & textarea {
+    resize: none;
+  }
+}
+
+.container{
+  max-width: 75%;
+  margin-left:auto;
+  margin-right:auto;
+
+  @include atLarge{
+    max-width: 85%;
+  }
+
+  @include atMedium{
+    max-width: 95%;
+  }
+
+  @include atSmall{
+    max-width: 75%;
+  }
+  @include atSmallest{
+    max-width: 85%;
+  }
+
+}
+
+.reveal{
+  opacity: 0;
+  transition:  all 3s ease;
+  
+}
+
+.reveal-visible{
+  opacity: 1;
+  
+}
+
+.reveal-profile-portfolio{
+  opacity: 0;
+  transition: all 1.5s ease;
+    transform: scale(1.05);
+    backface-visibility: hidden;
+
+}
+
+.reveal-profile-portfolio-visible {
+  opacity: 1;
+    transform: scale(1);
+    backface-visibility: hidden;
+}
+
+

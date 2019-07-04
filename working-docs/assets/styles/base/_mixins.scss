@@ -1,0 +1,54 @@
+@mixin atSmallest {
+    @media only screen and (max-width: 35.9em) {
+      @content;
+    }
+  }
+  
+  @mixin atSmall {
+    @media only screen and (max-width: 47.9em) {
+      @content;
+    }
+  }
+  
+  @mixin atMedium {
+    @media only screen and (max-width: 61.9em) {
+      @content;
+    }
+  }
+  @mixin atLarge {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  
+  @mixin minAtLargest {
+    @media only screen and (min-width: 75.1em) {
+      @content;
+    }
+  }
+  
+  @mixin minAtLarge {
+    @media only screen and (min-width: 62em) {
+      @content;
+    }
+  }
+  
+  @mixin minAtMedium {
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  
+  @mixin minAtSmall {
+    @media only screen and (min-width: 36em) {
+      @content;
+    }
+  }
+  
+  @mixin absCenter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  
